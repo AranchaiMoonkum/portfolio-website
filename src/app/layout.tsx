@@ -33,11 +33,13 @@ export default function RootLayout({
                         backgroundSize: "50px 50px"
                     }}>
                     <div className="md:flex md:flex-row md:justify-center">
-                        <div className="flex flex-col justify-start max-w-2xl px-8 py-24">
-                            <div className="flex flex-col gap-12 origin-left">
-                                <Header />
-                                <Navbar />
-                                {children}
+                        <div className="md:min-w-[512px] md:w-full md:max-w-2xl">
+                            <div className="flex flex-col justify-start max-w-2xl px-8 py-24">
+                                <div className="flex flex-col gap-12 origin-left">
+                                    <Header />
+                                    <Navbar />
+                                    {children}
+                                </div>
                             </div>
                         </div>
                     </div>
