@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
+import Navbar from "@/components/navbar"
 
 const jetBrainsMono = JetBrains_Mono({
     variable: "--font-jetbrains-mono",
@@ -21,20 +22,23 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${jetBrainsMono.className} antialiased text-[#E1E1E1]`}
+                className={`${jetBrainsMono.className} antialiased`}
             >
-                <div className="min-h-screen w-full bg-[#151515] absolute"
+                <div className="min-h-screen bg-neutral-900 w-full relative"
                     style={{
                         backgroundImage: `
-                 linear-gradient(to right, #202020 1px, transparent 1px),
-                 linear-gradient(to bottom, #202020 1px, transparent 1px)
+                 linear-gradient(to right, #262626 1px, transparent 1px),
+                 linear-gradient(to bottom, #262626 1px, transparent 1px)
                `,
                         backgroundSize: "50px 50px"
                     }}>
                     <div className="md:flex md:flex-row md:justify-center">
                         <div className="flex flex-col justify-start max-w-2xl px-8 py-24">
-                            <Header />
-                            {children}
+                            <div className="flex flex-col gap-12 origin-left">
+                                <Header />
+                                <Navbar />
+                                {children}
+                            </div>
                         </div>
                     </div>
                 </div>
