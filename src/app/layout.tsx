@@ -1,14 +1,9 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const jetBrainsMono = JetBrains_Mono({
+    variable: "--font-jetbrains-mono",
     subsets: ["latin"],
 })
 
@@ -25,9 +20,18 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${jetBrainsMono.className} antialiased`}
             >
-                {children}
+                <div className="min-h-screen w-full bg-[#151515] flex justify-center"
+                    style={{
+                        backgroundImage: `
+                 linear-gradient(to right, #202020 1px, transparent 1px),
+                 linear-gradient(to bottom, #202020 1px, transparent 1px)
+               `,
+                        backgroundSize: "50px 50px"
+                    }}>
+                    {children}
+                </div>
             </body>
         </html>
     )
