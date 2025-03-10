@@ -5,8 +5,8 @@ export default function Home() {
         <article className="flex flex-col gap-12">
             <span>
                 <Link href="/works/pos-system" className="relative inline-flex flex-col gap-1 no-underline">
-                    <h1>POS system <span className="text-red-500">[Work in process]</span></h1>
-                    <span className="text-neutral-500">Jan 2025 - Current</span>
+                    <h1>POS system</h1>
+                    <span className="text-neutral-500">Jan 2025 - 3 March 2025</span>
                 </Link>
             </span>
             <span>
