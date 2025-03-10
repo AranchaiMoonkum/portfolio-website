@@ -6,7 +6,7 @@ export default function Home() {
             <span>
                 <Link href="/works/pos-system" className="relative inline-flex flex-col gap-1 no-underline">
                     <h1>POS system</h1>
-                    <span className="text-neutral-500">Jan 2025 - 3 March 2025</span>
+                    <span className="text-neutral-500">Jan 2025 - Mar 2025</span>
                 </Link>
             </span>
             <span>
